@@ -1,0 +1,4 @@
+version: 1
+display_name: Folder Organizer
+short_description: Recursively classify files and build searchable indexes
+default_prompt: Organize this folder recursively, show me a dry-run plan first, then generate an index of file locations.

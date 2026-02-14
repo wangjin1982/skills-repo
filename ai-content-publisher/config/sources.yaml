@@ -1,0 +1,53 @@
+# 管理内容源配置
+# 使用WebSearch方式获取管理类内容
+
+# 管理类媒体和博客
+management_sources:
+  - name: "哈佛商业评论"
+    url: "https://hbr.org"
+    enabled: true
+    weight: 1.0
+
+  - name: "36Kr管理专栏"
+    url: "https://36kr.com/tag/管理"
+    enabled: true
+    weight: 0.9
+
+  - name: "虎嗅管理"
+    url: "https://www.huxiu.com/tag/管理"
+    enabled: true
+    weight: 0.9
+
+  - name: "知乎管理话题"
+    url: "https://www.zhihu.com/topic/19551131/hot"
+    enabled: true
+    weight: 0.8
+
+# WebSearch关键词配置
+search_keywords:
+  # 核心管理主题
+  - "团队管理 2025"
+  - "领导力提升"
+  - "中高层管理"
+  - "个人管理"
+  - "职场智慧"
+
+  - "团队建设"
+  - "员工激励"
+  - "决策思维"
+  - "组织文化"
+  - "人才管理"
+
+  - "管理实战案例"
+  - "创业者管理经验"
+  - "Team Leader技能"
+
+# GitHub配置（管理工具相关）
+github:
+  enabled: false  # 管理内容暂不需要GitHub
+
+# 内容时效性（小时）- 从48小时扩展到7天
+max_age_hours: 168  # 7天 = 7 * 24小时
+
+# 每次获取的最大热点数量
+max_hotspots_per_source: 10

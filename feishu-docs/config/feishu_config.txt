@@ -1,0 +1,10 @@
+# 飞书应用配置文件
+
+# 飞书应用ID
+FEISHU_APP_ID=cli_a9d176668a38dbc9
+
+# 飞书应用密钥
+FEISHU_APP_SECRET=jDB6hdclWymSvK0lXVH0Bd0CgtfCJT6T
+
+# API域名（可选，默认为飞书国内版）
+FEISHU_DOMAIN=https://open.feishu.cn

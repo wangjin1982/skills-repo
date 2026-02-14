@@ -1,0 +1,17 @@
+{
+  "server": {
+    "host": "119.45.164.115",
+    "port": 5000,
+    "timeout": 30
+  },
+  "wechat": {
+    "app_id": "你的微信AppID",
+    "app_secret": "你的微信AppSecret",
+    "account_name": "公众号名称"
+  },
+  "publish": {
+    "default_author": "作者名",
+    "title_max_length": 10,
+    "cover_required": true
+  }
+}

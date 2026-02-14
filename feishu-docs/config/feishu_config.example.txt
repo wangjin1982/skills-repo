@@ -1,0 +1,14 @@
+# 飞书应用配置文件示例
+# 复制此文件为 feishu_config.txt 并填入你的实际值
+
+# 飞书应用ID
+FEISHU_APP_ID=cli_a9d176668a38dbc9
+
+# 飞书应用密钥
+FEISHU_APP_SECRET=jDB6hdclWymSvK0lXVH0Bd0CgtfCJT6T
+
+# API域名（可选，默认为飞书国内版）
+# FEISHU_DOMAIN=https://open.feishu.cn
+
+# 如果使用飞书海外版（Lark），取消下面的注释
+# FEISHU_DOMAIN=https://open.larksuite.com
