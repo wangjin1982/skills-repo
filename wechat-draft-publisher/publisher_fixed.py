@@ -112,16 +112,16 @@ class WeChatPublisher:
             result = response.json()
 
             if 'media_id' in result:
-                print(f"✓ 封面图上传成功: {result['media_id']}")
+                print(f"✅ 封面图上传成功: {result['media_id']}")
                 return result['media_id']
             else:
                 print(f"✗ 封面图上传失败: {result.get('errmsg', '未知错误')}")
                 return ""
 
     def publish_draft(self, title: str, content: str, author: str = "王金",
-                   cover_media_id: Optional[str] = None, digest: str = "",
-                   content_source_url: str = "", show_cover_pic: int = 1,
-                   need_open_comment: int = 1, only_fans_can_comment: int = 0) -> Dict[str, Any]:
+                       cover_media_id: Optional[str] = None, digest: str = "",
+                       content_source_url: str = "", show_cover_pic: int = 1,
+                       need_open_comment: int = 1, only_fans_can_comment: int = 0) -> Dict[str, Any]:
         """
         发布文章到草稿箱（UTF-8编码修复版）
 
@@ -143,13 +143,16 @@ class WeChatPublisher:
                     "digest": digest[:120] if digest else "",  # 摘要限制120字节
                     "content": content,
                     "content_source_url": content_source_url,
-                    "thumb_media_id": cover_media_id,
                     "show_cover_pic": show_cover_pic,
                     "need_open_comment": need_open_comment,
                     "only_fans_can_comment": only_fans_can_comment
                 }
             ]
         }
+
+        # 只在 cover_media_id 非空时才添加它
+        if cover_media_id:
+            article_data["articles"][0]["thumb_media_id"] = cover_media_id
 
         # 关键修复：使用 ensure_ascii=False 并手动编码
         response = requests.post(
